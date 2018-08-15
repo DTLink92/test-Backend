@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=the_walking_bugs
+    username: sa
+    password: admin1234
+    platform: mssql
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+    ddl-auto: create-drop
+    database: SQL_SERVER
+    show-sql: true
+#spring:
+#  datasource:
+#    url: jdbc:sqlserver://localhost
+#    username: sa
+#    password: P@55w0rd
+#    platform: mssql
+#    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop
+#    database: SQL_SERVER
+#    show-sql: true

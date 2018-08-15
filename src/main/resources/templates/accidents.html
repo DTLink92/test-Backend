@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<h1>LIATA DE ACCIDENTES</h1>
+
+<table>
+    <tr>
+      /*  private Date ;
+        private Date ;
+        private String ;
+        private String ;
+        private  String ;*/
+        <th>ID</th>
+        <th>FECHA ACCIDENTE</th>
+        <th>HORA ACCIDENTE</th>
+        <th>LUGAR DE ACCIDENTE</th>
+        <th>GRAVEDAD DEL ACCIDNETE</th>
+        <th>DESCRIPCION DEL ACCIDENTE</th>
+    </tr>
+    <tr th:each="accident:${accident}">
+        <td th:text="${accident.id}"></td>
+        <td th:text="${accident.date_accident}"></td>
+        <td th:text="${accident.place_accident}"></td>
+        <td th:text="${accident.gravity_accident}"></td>
+        <td th:text="${accident.description_accident}"></td>
+
+        <td>
+            <table>
+                <tr th:each="contract:${accident.accidentType}">
+                    <td th:text="${accidentType.id}">123</td>
+                    <td th:text="${accidentType.name_type_accident}">Jhon</td>
+                </tr>
+            </table>
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+// application.yml
+
+modificar a esto
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=the_walking_bug
+    username: sa
+    password: admin1234
+    platform: mssql
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: none -- es para que no se lea el devbootstrap -- para crear las tablas y limpiar es created-drop
+    database: SQL_SERVER
+    show-sql: true
+#spring:
+
+//archivo pom
+//eliminar la dependencia de mysql por la sqlserver
+//por esto
+
+		<dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>6.4.0.jre8</version>
+        </dependency>
+		
+//devbootstrap
+//se comento la siguiente linea
+
+//@Component
