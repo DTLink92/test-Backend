@@ -1,5 +1,6 @@
 package com.dh.spring5webapp;
 
+import com.dh.spring5webapp.controller.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -20,10 +21,36 @@ public class JerseyConfig extends ResourceConfig {
 
     @Autowired
     public JerseyConfig(ObjectMapper objectMapper) {
-        packages("com.dh.spring5webapp.controller");
+        //packages("com.dh.spring5webapp.controller");
         register(new ObjectMapperContextResolver(objectMapper));
         register(MultiPartFeature.class);
         register(new CorsFilter());
+        register(AccidentCauseController.class);
+        register(AccidentCauseGroupController.class);
+        register(AccidentCausesController.class);
+        register(AccidentController.class);
+        register(AccidentTypeController.class);
+        register(AreaController.class);
+        register(AssignEquipmentController.class);
+        register(AuditHistoryController.class);
+        register(CorrectiveMeasuresController.class);
+        register(DetailAssignEquipmentController.class);
+        register(DWAccidentController.class);
+        register(EmployeeAccidentController.class);
+        register(EmployeeController.class);
+        register(EquipmentController.class);
+        register(IndexController.class);
+        register(PerformanceController.class);
+        register(PositionAssignEmployeeController.class);
+        register(PositionController.class);
+        register(PositionEquipmentController.class);
+        register(PositionEvaluationMetricController.class);
+        register(PositionRecruitmentProfileController.class);
+        register(PositionTypeEvaluatorController.class);
+        register(ProjectController.class);
+        register(RoleController.class);
+        register(TypeEquipmentController.class);
+        register(UserController.class);
     }
 
     @Provider

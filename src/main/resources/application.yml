@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://localhost:1433;databaseName=the_walking_bugs
+    url: jdbc:sqlserver://192.168.136.1:1433;databaseName=the_walking_bugs
     username: sa
     password: admin1234
     platform: mssql
